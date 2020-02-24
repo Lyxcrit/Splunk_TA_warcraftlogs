@@ -1,0 +1,32 @@
+<dashboard>
+  <label>dps by source (test)</label>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>
+            index=* (event="ENCOUNTER_START" AND raid=409 encounterId=663 ) OR (event="ENCOUNTER_END" encounterId=663)
+            | stats last(_time) as startTime, first(_time) as endTime
+            | eval fightLength = endTime - startTime
+            | append 
+                [search index=* ((event="SWING_DAMAGE" OR event="SPELL_DAMAGE") AND (dest="Lucifron" OR dest="Flamewaker Protector")) 
+                | eval spellName = if(event="SWING_DAMAGE", "Melee", spellName)
+                | stats sum(amount) as total_damage by src
+                | sort -total_damage 
+            | eval dps = total_damage / fightLength ]
+          </query>
+          <earliest>1581915600</earliest>
+          <latest>1582002000</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

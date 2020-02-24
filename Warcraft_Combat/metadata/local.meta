@@ -1,0 +1,588 @@
+[app/ui]
+version = 8.0.0
+modtime = 1581892917.862457300
+
+[app/launcher]
+version = 8.0.0
+modtime = 1581892917.874409200
+
+[props/Logs%3ACombat]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581896695.716704900
+
+[props/combatlog]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581896869.424484700
+
+[transforms/REPORT-SPELL_AURA_APPLIED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581989838.813749600
+
+[props/combatlogs/REPORT-SPELL_AURA_APPLIED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581911164.132889700
+
+[transforms/REPORT-SPELL_DAMAGE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582053781.419432100
+
+[props/combatlogs/REPORT-SPELL_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581914023.478295500
+
+[transforms/REPORT-ENCOUNTER_END]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581975752.252114500
+
+[props/combatlogs/REPORT-ENCOUNTER_END]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581915862.180084100
+
+[transforms/REPORT-ENCOUNTER_START]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581976363.059792500
+
+[props/combatlogs/REPORT-ENCOUNTER_START]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581916057.103006500
+
+[transforms/REPORT-SWING_DAMAGE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582049142.996420900
+
+[props/combatlogs/REPORT-SWING_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581961715.559153900
+
+[indexes/wow_logs]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581971866.941233400
+
+[transforms/REPORT-PARTYKILL]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581972128.373492600
+
+[props/wow%3Apartykill/REPORT-PARTYKILL]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581972128.508133000
+
+[transforms/REPORT-DAMAGE_SHIELD]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581972943.528285100
+
+[props/wow%3Adamage%3Ashield/REPORT-DAMAGE_SHIELD]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581972943.665448200
+
+[transforms/REPORT-DAMAGE_SHIELD_MISSED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581974179.375171900
+
+[props/wow%3Adamage%3Ashield%3Amissed/REPORT-DAMAGE_SHIELD_MISSED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581974179.506847600
+
+[transforms/REPORT-DAMAGE_SPLIT]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581974483.596243000
+
+[props/wow%3Adamage%3Asplit/REPORT-DAMAGE_SPLIT]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581974483.726868900
+
+[transforms/REPORT-ENCHANT_APPLIED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581975118.940643000
+
+[props/wow%3Aenchant%3Aapplied/REPORT-ENCHANT_APPLIED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581975119.076280400
+
+[transforms/REPORT-ENCHANT_REMOVED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581975598.873639300
+
+[props/wow%3Aenchant%3Aremoved/REPORT-ENCHANT_REMOVED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581975599.007254900
+
+[props/wow%3Aencounter%3Aend/REPORT-ENCOUNTER_END]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581975752.384440700
+
+[props/wow%3Aencounter%3Astart/REPORT-ENCOUNTER_START]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581976363.187454700
+
+[transforms/REPORT-ENVIRONMENTAL_DAMAGE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581983955.952668400
+
+[props/wow%3Aenvironmental%3Adamage/REPORT-ENVIRONMENTAL_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581983956.088389500
+
+[transforms/REPORT-RANGE_DAMAGE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581984298.724309100
+
+[props/wow%3Arange%3Adamage/REPORT-RANGE_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581984298.855930400
+
+[transforms/REPORT-RANGED_MISSED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581984770.778651700
+
+[props/wow%3Arange%3Amissed/REPORT-RANGED_MISSED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581984770.940786300
+
+[transforms/REPORT-SPELL_INTERUPT]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581984988.288083300
+
+[props/wow%3Aspell/REPORT-SPELL_INTERUPT]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581984988.440179900
+
+[transforms/REPORT-SPELL_ABSORBED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581986691.794404100
+
+[props/wow%3Aspell%3Aabsorbed/REPORT-SPELL_ABSORBED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581986691.962893800
+
+[transforms/REPORT-SPELL_AURA_REFRESH]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581987057.343368800
+
+[props/wow%3Aspell%3Aaura/REPORT-SPELL_AURA_REFRESH]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581987057.492968500
+
+[transforms/REPORT-SPELL_AURA_BROKEN]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581987237.589414900
+
+[props/wow%3Aspell%3Aaura%3Abroken/REPORT-SPELL_AURA_BROKEN]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581987237.737486100
+
+[transforms/REPORT-SPELL_AURA_BROKEN_SPELL]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581987852.352923600
+
+[props/wow%3Aspell%3Aaura%3Abroken%3Aspell/REPORT-SPELL_AURA_BROKEN_SPELL]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581987852.515622600
+
+[props/wow%3Aspell%3Aaura%3Arefreshed/REPORT-SPELL_AURA_APPLIED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581989838.970376900
+
+[transforms/REPORT-SPELL_AURA_REMOVED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581991864.949652400
+
+[props/wow%3Aspell%3Aaura%3Aremoved/REPORT-SPELL_AURA_REMOVED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581991865.104691100
+
+[transforms/REPORT-SPELL_AURA_REMOVED_DOSE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581992615.152570800
+
+[props/wow%3Aspell%3Aaura%3Aremoveddose/REPORT-SPELL_AURA_REMOVED_DOSE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581992615.304166600
+
+[transforms/REPORT-SPELL_CAST_FAILED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581992955.593996000
+
+[props/wow%3Aspell%3Acast%3Afailed/REPORT-SPELL_CAST_FAILED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581992955.754110300
+
+[transforms/REPORT-SPELL_CAST_START]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993138.077727700
+
+[props/wow%3Aspell%3Acast%3Astart/REPORT-SPELL_CAST_START]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993138.254916700
+
+[transforms/REPORT-SPELL_CAST_SUCCESS]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993488.442196600
+
+[props/wow%3Aspell%3Acast%3Asuccess/REPORT-SPELL_CAST_SUCCESS]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993488.610979100
+
+[transforms/REPORT-SPELL_CREATE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993582.581158000
+
+[props/wow%3Aspell%3Acreate/REPORT-SPELL_CREATE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993582.772649900
+
+[transforms/REPORT-SPELL_DISPEL]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993761.896258800
+
+[props/wow%3Aspell%3Adispel/REPORT-SPELL_DISPEL]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581993762.055966600
+
+[transforms/REPORT-SPELL_DRAIN]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581994041.904604000
+
+[props/wow%3Aspell%3Adrain/REPORT-SPELL_DRAIN]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581994042.062182900
+
+[transforms/REPORT-SPELL_DURABILITY_DAMAGE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581994741.701577500
+
+[props/wow%3Aspell%3Adurabilitydamage/REPORT-SPELL_DURABILITY_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581994741.893586500
+
+[transforms/REPORT-SPELL_ENERGIZE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581995105.661778100
+
+[props/wow%3Aspell%3Aenergize/REPORT-SPELL_ENERGIZE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581995105.820360800
+
+[transforms/REPORT-SPELL_EXTRA_ATTACKS]
+owner = bmatlock
+version = 8.0.0
+modtime = 1581996584.516693300
+
+[props/wow%3Aspell%3Aextraattacks/REPORT-SPELL_EXTRA_ATTACKS]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1581996584.675186900
+
+[transforms/REPORT-SPELL_HEAL]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582036507.087535100
+
+[props/wow%3Aspell%3Aheal/REPORT-SPELL_HEAL]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582036507.249954200
+
+[transforms/REPORT-SPELL_INSTAKILL]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582040630.357814100
+
+[props/wow%3Aspell%3Ainstakill/REPORT-SPELL_INSTAKILL]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582040630.508412000
+
+[transforms/REPORT-SPELL_MISSED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582041193.651726600
+
+[props/wow%3Aspell%3Amissed/REPORT-SPELL_MISSED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582041193.793639300
+
+[transforms/REPORT-SPELL_RESURRECT]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582041627.948968700
+
+[props/wow%3Aspell%3Aressurect/REPORT-SPELL_RESURRECT]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582041628.107543900
+
+[transforms/REPORT-SPELL_SUMMON]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582041941.919524400
+
+[props/wow%3Aspell%3Asummon/REPORT-SPELL_SUMMON]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582041942.058125300
+
+[transforms/REPORT-SPELL_PERIODIC_DAMAGE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582044043.360604300
+
+[props/wow%3Aspellperiodic%3Adamage/REPORT-SPELL_PERIODIC_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582044043.502339000
+
+[transforms/REPORT-SPELL_PERIODIC_ENERGIZE]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582047768.713169400
+
+[props/wow%3Aspellperiodic%3Aenergize/REPORT-SPELL_PERIODIC_ENERGIZE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582047768.848801400
+
+[transforms/REPORT-SPELL_PERIODIC_HEAL]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582048276.682117800
+
+[props/wow%3Aspellperiodic%3Aheal/REPORT-SPELL_PERIODIC_HEAL]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582048276.842688700
+
+[transforms/REPORT-SPELL_PERIODIC_MISSED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582048402.992514300
+
+[props/wow%3Aspellperiodic%3Amissed/REPORT-SPELL_PERIODIC_MISSED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582048403.129176900
+
+[props/wow%3Aswing%3Adamage/REPORT-SWING_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582049143.132090300
+
+[transforms/REPORT-SWING_DAMAGE_LANDED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582050502.846171900
+
+[props/wow%3Aswing%3Adamage%3Alanded/REPORT-SWING_DAMAGE_LANDED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582050502.983798000
+
+[transforms/REPORT-SWING_MISSED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582050604.036111200
+
+[props/wow%3Aswing%3Amissed/REPORT-SWING_MISSED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582050604.184278300
+
+[transforms/REPORT-UNIT_DIED]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582050710.684875200
+
+[props/wow%3Aunitdead/REPORT-UNIT_DIED]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582050710.865366700
+
+[props/wow%3Aspell%3Adamage/REPORT-SPELL_DAMAGE]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = bmatlock
+version = 8.0.0
+modtime = 1582053781.562051600
+
+[lookups/InstanceId.csv]
+access = read : [ * ], write : [ admin, power ]
+export = system
+owner = nobody
+version = 8.0.0
+modtime = 1582057746.201011900
+
+[views/damage_done_by_src]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582143582.184449000
+
+[views/raid_calendar]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582254766.008639500
+
+[views/dps_by_source_test]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582326284.610041300
+
+[views/flask_check]
+owner = bmatlock
+version = 8.0.0
+modtime = 1582421777.320653100

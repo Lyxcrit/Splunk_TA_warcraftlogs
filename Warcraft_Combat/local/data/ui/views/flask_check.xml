@@ -1,0 +1,27 @@
+<dashboard>
+  <label>Flask Check</label>
+  <description>Uses the combatlog.txt from World of Warcraft: Classic to determine who used a flask during raid.</description>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>index=wow_logs event=SPELL_AURA_APPLIED src=*-Westfall
+| eval spellName = case(spellName="Flask of the Titans", 1, spellName="Distilled Wisdom", 1, spellName="Supreme Power",1)
+| eval Flask = if(isnotnull(spellName), "Yes", "No")
+| stats values(Flask) as flasked by src
+| search flasked!=yes</query>
+          <earliest>1581548460</earliest>
+          <latest>1581643380</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

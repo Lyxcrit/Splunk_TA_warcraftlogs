@@ -1,0 +1,52 @@
+<dashboard theme="dark">
+  <label>Raid Calendar</label>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>
+            index=wow_logs (event=ENCOUNTER_START AND (encounterName=Lucifron OR encounterName="Razorgore*")) OR (event=ENCOUNTER_END AND (encounterName=Ragnaros OR encounterName=Nefarian)) 
+            | eval raidName = case(raid=409 OR encounterName="Lucifron" OR encounterName="Ragnaros", "Molten Core", raid=469 OR encounterName="Razorgore*" OR encounterName="Nefarian", "Blackwing Lair")
+            | eval startTime = if(event="ENCOUNTER_START", _time, null), endTime = if(event="ENCOUNTER_END", _time, null)
+            | stats last(startTime) as startTime, last(endTime) as endTime, list(raid) as raid by raidName, date_wday, date_month, date_mday
+            | eval clearTime = ((endTime-startTime)), clearTime=tostring(clearTime, "duration"), clearTime = replace(clearTime, "(\d{1,2}):(\d{1,2}).*", "\1:\2"), dateOfRaid = upper(date_month + " " + date_mday + ", " + date_wday), endTime = endTime+10
+            | table raidName, clearTime, dateOfRaid, startTime, endTime, raid
+            | eval clearTime = if(isnotnull(clearTime), clearTime, "Incomplete Raid")
+            | sort dateOfRaid
+          </query>
+        </search>
+        <fields>raidName, clearTime, dateOfRaid</fields>
+        <option name="drilldown">row</option>
+        <drilldown>
+          <set token="startTime">$row.startTime$</set>
+          <set token="endTime">$row.endTime$</set>
+          <set token="raidName">$row.raid$</set>
+          <set token="encounterId">*</set>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel depends="$startTime$">
+      <table>
+        <title>Boss Kill Times</title>
+        <search>
+          <query>
+            index=* (event="ENCOUNTER_START" raid=$raidName$ encounterId=* ) OR (event="ENCOUNTER_END" encounterId=* success=1) 
+            | eval START = if(event="ENCOUNTER_START", timestamp, null)
+            | eval END = if(event="ENCOUNTER_END", timestamp, null)
+            | stats first(START) AS START, first(END) AS END BY encounterName 
+            | eval KillTime = round(strptime(END, "%m/%d %H:%M:%S.%3N") - strptime(START, "%m/%d %H:%M:%S.%3N"), 2)
+            | eval KillTime = strftime(KillTime, "%M:%S")
+            | sort START
+            | where isnotnull(KillTime) | rename KillTime AS "Kill Time"
+            | table encounterName, "Kill Time"
+          </query>
+          <earliest>$startTime$</earliest>
+          <latest>$endTime$</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

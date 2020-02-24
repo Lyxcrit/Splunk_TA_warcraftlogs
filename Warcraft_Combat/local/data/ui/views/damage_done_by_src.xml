@@ -1,0 +1,32 @@
+<dashboard>
+  <label>Damage Done by Src</label>
+  <row>
+    <panel>
+      <title>Damage Done by Source</title>
+      <table>
+        <search>
+          <query>
+            index=wow_logs dest=Ragnaros src=*-Westfall (event=SWING_DAMAGE OR event=SPELL_DAMAGE)
+            | eval start = strptime("2/18 22:03:06.188", "%m/%d %H:%M:%S.%3N"), finish = strptime("2/18 22:04:26.534", "%m/%d %H:%M:%S.%3N")
+            | where _time &lt;finish AND _time &gt; start
+            | stats sum(amount) as damage by src, start, finish
+            | eval fightInSeconds = (finish-start), dps = round(damage/fightInSeconds,2)
+            | sort -damage
+            | rename src AS Source, damage AS Damage, dps AS DPS
+            | table Source, Damage, DPS
+          </query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">10</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>
